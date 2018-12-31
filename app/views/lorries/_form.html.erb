@@ -1,0 +1,17 @@
+<%= form_with(model: lorry, local: true) do |form| %>
+  <% if lorry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lorry.errors.count, "error") %> prohibited this lorry from being saved:</h2>
+
+      <ul>
+      <% lorry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

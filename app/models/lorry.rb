@@ -1,0 +1,2 @@
+class Lorry < ApplicationRecord
+end
